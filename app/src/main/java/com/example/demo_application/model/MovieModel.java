@@ -97,8 +97,6 @@ public class MovieModel {
     @BindingAdapter({ "image" })
     public static void loadImage(ImageView imageView, String imageURL) {
         Glide.with(imageView.getContext())
-                .setDefaultRequestOptions(new RequestOptions()
-                        .circleCrop())
                 .load(imageURL)
                 .into(imageView);
     }

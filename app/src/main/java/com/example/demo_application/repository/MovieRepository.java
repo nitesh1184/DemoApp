@@ -1,5 +1,7 @@
 package com.example.demo_application.repository;
 
+import android.util.Log;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
@@ -42,6 +44,7 @@ public class MovieRepository {
 
             @Override
             public void onFailure(Call<List<MovieModel>> call, Throwable t) {
+                Log.e(TAG, "onFailure: failed to fetch data", t);
             }
         });
 
